@@ -5,10 +5,10 @@ import FileBase from "react-file-base64";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { createPost, updatePost } from "../../actions/posts";
-import { pink } from '@mui/material/colors';
+
 
 //-----------<ComponentStyles>----------------
-const pinkColor= pink[500];
+
 
 const StyledPaper = styled(Paper)`
     padding: 8px;
@@ -26,7 +26,7 @@ const StyledFileInput = styled.div`
 `;
 const StyledButton = styled(Button)`
     margin: 10px !important;
-    background-color: ${pinkColor} !important;
+    
 `
 
 //-----------</ComponentStyles>---------------
@@ -92,6 +92,7 @@ const Form = ({ currentId, setCurrentId}) =>{
                 <TextField name="tags" variant="outlined" label="Tags" fullWidth value={postData.tags}
                 onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })}/>
                 <StyledFileInput>
+                    Image
                     <FileBase
                         type="file"
                         multiple={false}
@@ -99,7 +100,7 @@ const Form = ({ currentId, setCurrentId}) =>{
                     />
                 </StyledFileInput>
                 
-                <StyledButton variant='contained' size='large' type='submit'>Submit</StyledButton>
+                <StyledButton variant='contained' color="secondary" size='large' type='submit'>Submit</StyledButton>
                 <StyledButton variant='contained' color='secondary' size='small' onClick={clear}>Clear</StyledButton>
                 
             </StyledForm>

@@ -45,7 +45,7 @@ justify-content: space-between;
 width: 400px;
 `;
 const StyledButton = styled(Button)`
-    background-color: ${pinkColor} !important;
+    
 `
 //-----------</ComponentStyles>--------------
 
@@ -86,11 +86,11 @@ const Navbar = () => {
             {user ? (
                 <Profile>
                     <Avatar alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar>
-                    <UserName variant="h6">{user.result.name}</UserName>
-                    <StyledButton variant="contained" onClick={logout}>Logout</StyledButton>
+                    <UserName variant="h6" color="white">{user.result.name}</UserName>
+                    <StyledButton variant="contained" color="secondary" onClick={logout}>Logout</StyledButton>
                 </Profile>
             ) : (
-                <StyledButton component={Link} to="/auth" variant="contained">Sign In</StyledButton>
+                <StyledButton component={Link} to="/auth" variant="contained" color="secondary">Sign In</StyledButton>
             )}
         </StyledToolbar>
     </StyledAppBar>

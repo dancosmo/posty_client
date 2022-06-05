@@ -47,13 +47,13 @@ const Form = styled.form`
 
 const StyledButtonTwo = styled(Button)`
   margin-bottom: 16px !important;
-  background-color: ${pinkColor} !important;
+  
   color: white !important;
 `;
 
 const StyledButton = styled(Button)`
   margin: 24px 0 16px !important;
-  background-color: ${pinkColor} !important;
+  
 `;
 
 //-----------</ComponentStyles>---------------
@@ -155,10 +155,10 @@ const Auth = () => {
 
           <Grid container>
             <Grid item>
-              <StyledButton type="submit" fullWidth variant="contained" onClick={handleSubmit}>
+              <StyledButton type="submit" fullWidth variant="contained" color="secondary" onClick={handleSubmit}>
                 {isSignup ? "Sign Up" : "Sign In"}
               </StyledButton>
-              <StyledButtonTwo fullWidth variant="contained" onClick={switchMode}>
+              <StyledButtonTwo fullWidth variant="contained" color="secondary" onClick={switchMode}>
                 {isSignup
                   ? "Already have an account ? Sign In"
                   : "Don't have an account ? Sign Up"}
@@ -171,6 +171,7 @@ const Auth = () => {
                     onClick={renderProps.onClick}
                     startIcon={<GoogleIcon />}
                     variant="contained"
+                    color="secondary"
                   >
                     Google Sign In
                   </StyledButtonTwo>

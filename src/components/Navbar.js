@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import decode from "jwt-decode";
@@ -56,12 +56,11 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const logout = () =>{
+  const logout = useCallback(() =>{
     dispatch({ type: "LOGOUT" });
     setUser(null);
     navigate("/auth");
-
-  };
+  },[dispatch, navigate]);
 
    useEffect(() =>{
       const token = user?.token;
@@ -73,7 +72,7 @@ const Navbar = () => {
       }
 
       setUser(JSON.parse(localStorage.getItem("profile")));
-   },[location, user?.token]);
+   },[location, user?.token, logout]);
 
   return (
     <StyledAppBar position="static" color="inherit">

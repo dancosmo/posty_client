@@ -18,12 +18,13 @@ const StyledAppBar = styled(AppBar)`
   flex-direction: row !important;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(to right,#7f0e7f 10.85%,#7f0e7f 23.28%,#7f0e7f 50%);
 `;
 
 const StyledTypography = styled(Typography)`
 margin-left: 16px !important;
 text-decoration: none;
-color: ${pinkColor};
+color: white;
 `;
 const UserName = styled(Typography)`
   display: flex;

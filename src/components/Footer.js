@@ -5,7 +5,6 @@ import styled from "styled-components";
 //-----------<ComponentStyles>----------------
 const StyledFooter = styled.div`
     margin-top: 15px;
-    position: absolute;
     text-align: center;
     bottom: 0px;
     right: 0px;

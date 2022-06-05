@@ -5,11 +5,8 @@ import decode from "jwt-decode";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { AppBar, Typography, Toolbar, Avatar, Button } from "@mui/material";
-import { pink } from '@mui/material/colors';
 
 //-----------<ComponentStyles>--------------
-
-const pinkColor= pink[500];
 
 const StyledAppBar = styled(AppBar)`
   border-radius: 15px;
